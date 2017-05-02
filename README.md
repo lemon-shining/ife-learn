@@ -4,4 +4,4 @@
 ---
 **小薇学院**
 
-1.任务一：零基础HTML编码 WiaoWei College/task1
+1.任务一：零基础HTML编码 XiaoWei College/task1
