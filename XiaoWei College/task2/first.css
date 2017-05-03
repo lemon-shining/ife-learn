@@ -1,0 +1,220 @@
+/*html5*/
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+    display: block;
+}
+/*reset.css*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, div, dl, dt, dd, h1, h2, h3, form, input, textarea, p, button, span, i, ul, ol, li, del, em {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*ul {
+    list-style: none;
+}*/
+i, em {
+    font-style: normal;
+}
+img {
+    border: 0;
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+body {
+    font-family: "microsoft yahei", "arial";
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+    line-height: 1.42857143;
+    background-color: #dedede;
+}
+html, body {
+    height: 100%;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.clear {
+    clear: both;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*my set*/
+nav{
+    background-color: #333;
+    height: 60px;
+    padding: 10px 20px;
+}
+nav h1{
+    float: left;
+    color:#fff;
+    height: 40px;
+    line-height: 40px;
+}
+nav ul{
+    float: right;
+    color:#000;
+}
+nav ul li{
+    float: left;
+    margin-left: 30px;
+}
+nav ul li a{
+    display: block;
+    color:#fff;
+    height: 40px;
+    line-height: 40px;
+}
+
+section{
+    margin: 20px;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 2px #999;
+}
+section h2{
+    margin: 10px 0 0 0;
+}
+section h3{
+    margin: 10px 0 0 0;
+    color:#999;
+}
+section p{
+    margin: 10px 0 0 0;
+    line-height: 1.5em;
+}
+section .subtitle{
+    font-size: 12px;
+    color:#999;
+}
+section .content{
+    text-indent:2em;
+}
+section ul{
+    margin: 10px 0 0 0;
+    list-style: none;
+    line-height: 1.5em;
+}
+section img{
+    width: 200px;
+}
+section ol{
+    margin: 10px 0 0 30px;
+}
+section table{
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    border-collapse: collapse;
+}
+section table thead{
+    background-color: #333;
+}
+section table thead th{
+    color: #fff;
+    padding: 5px;
+    border:solid 1px #ccc;
+}
+section table tbody td{
+    padding: 5px;
+    border:solid 1px #ccc;
+}
+section table tbody tr:last-child{
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+.img-con div{
+    margin: 10px auto 0 10px;
+    width: 120px;
+    border: solid 1px #ddd;
+    text-align: center;
+}
+.img-con div img{
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+.sidebar{
+    padding: 20px;
+}
+.sidebar h2{
+    border-left: solid 3px #ddd;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+}
+.sidebar p{
+    margin: 0;
+}
+.sidebar .form-row{
+    overflow: hidden;
+    margin: 10px 0 0 0;
+    line-height: 1.5em;
+}
+.sidebar .form-row .left{
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding: 0 20px 0 0;
+}
+.sidebar .form-row .right{
+    float: right;
+    width: 70%;
+    text-align: left;
+}
+.sidebar .form-row .remind{
+    color:#999;
+}
+.sidebar .form-row .right textarea{
+    width: 90%;
+    height: 100px;
+}
+.sidebar .form-row .right input[type=text],
+.sidebar .form-row .right input[type=password]{
+    padding: 0 0 0 5px;
+}
+.sidebar .form-row .right input[type=radio],
+.sidebar .form-row .right input[type=checkbox]{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+.sidebar input[type=submit]{
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #3355d0;
+}
+
