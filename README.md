@@ -5,3 +5,5 @@
 **小薇学院**
 
 1.任务一：零基础HTML编码 XiaoWei College/task1
+
+2.任务二：零基础HTML及CSS编码 XiaoWei College/task2
