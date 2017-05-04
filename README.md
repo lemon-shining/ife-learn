@@ -4,8 +4,8 @@
 ---
 **小薇学院**
 
-1.任务一：零基础HTML编码 XiaoWei College/task1
+1.任务一：零基础HTML编码 XiaoWei College/views/task1
 
-2.任务二：零基础HTML及CSS编码 XiaoWei College/task2
+2.任务二：零基础HTML及CSS编码 XiaoWei College/views/task2
 
-3.任务三：三栏式布局 XiaoWei College/task3
+3.任务三：三栏式布局 XiaoWei College/views/task3
