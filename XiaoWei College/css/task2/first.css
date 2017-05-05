@@ -32,7 +32,8 @@ section{
     margin: 20px;
     padding: 40px 20px;
     background-color: #fff;
-    box-shadow: 5px 5px 2px #999;
+    border: solid 1px #999;
+    box-shadow: 2px 2px 1px #999;
 }
 section h2{
     margin: 10px 0 0 0;
@@ -51,6 +52,7 @@ section .subtitle{
 }
 section .content{
     text-indent:2em;
+    overflow: hidden;
 }
 section ul{
     margin: 10px 0 0 0;

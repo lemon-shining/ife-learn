@@ -1,0 +1,32 @@
+body{
+    background-color: #fff;
+}
+.main{
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -200px;
+    background-color: #ccc;
+}
+.main .left{
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius:100px;
+    background-color: #fc0;
+}
+.main .right{
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius:100px;
+    background-color: #fc0;
+}
