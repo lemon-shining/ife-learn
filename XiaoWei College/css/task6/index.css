@@ -1,0 +1,76 @@
+body {
+  background-color: #545454;
+}
+.pa {
+  position: absolute;
+}
+.pr {
+  position: relative;
+}
+.font24 {
+  font-size: 24px;
+}
+.font12 {
+  font-size: 12px;
+}
+.main {
+  width: 980px;
+  height: 1386px;
+  margin: auto;
+  background-color: #fff;
+  padding: 0 44px;
+}
+.main header {
+  font-size: 12px;
+  border-bottom: solid 2px #938e8c;
+}
+.main header .left {
+  position: relative;
+  float: left;
+  width: 110px;
+  height: 61px;
+  background-color: #ce5455;
+  color: #fff;
+  font-family: "����";
+}
+.main header .left span {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+.main header .right {
+  position: relative;
+  top: 40px;
+  float: right;
+  color: #d45d5c;
+}
+.main .first {
+  margin: 40px 0 0 0;
+}
+.main .first .left {
+  position: relative;
+  float: left;
+  width: 641px;
+  height: 301px;
+  background-image: url(../../images/task6/banner1.jpg);
+}
+.main .first .left .banner-cover1,
+.main .first .left .banner-cover2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 191px;
+  height: 301px;
+}
+.main .first .left .banner-cover2 {
+  left: auto;
+  right: 0;
+}
+.main .first .right {
+  width: 200px;
+  float: right;
+  border-top: solid 2px #cc8091;
+}
+.main .first .right .top {
+  margin: 0 0 40px 0;
+}
