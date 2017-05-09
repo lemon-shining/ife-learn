@@ -13,3 +13,5 @@
 4.任务四：定位和居中问题 XiaoWei College/views/task4
 
 5.任务五：零基础HTML及CSS编码（二） XiaoWei College/views/task5
+
+6.任务六：通过HTML及CSS模拟报纸排版 XiaoWei College/views/task6
