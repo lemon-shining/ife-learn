@@ -9,13 +9,18 @@ body {
 }
 .font24 {
   font-size: 24px;
+  line-height: 24px;
+}
+.font21 {
+  font-size: 21px;
+  line-height: 21px;
 }
 .font12 {
   font-size: 12px;
+  line-height: 12px;
 }
 .main {
   width: 980px;
-  height: 1386px;
   margin: auto;
   background-color: #fff;
   padding: 0 44px;
@@ -46,6 +51,7 @@ body {
 }
 .main .first {
   margin: 40px 0 0 0;
+  overflow: hidden;
 }
 .main .first .left {
   position: relative;
@@ -72,5 +78,297 @@ body {
   border-top: solid 2px #cc8091;
 }
 .main .first .right .top {
-  margin: 0 0 40px 0;
+  margin: 4px 0 32px 0;
+}
+.main .first .right .top .font24 {
+  display: inline-block;
+  text-decoration: underline;
+  line-height: 1.5em;
+}
+.main .first .right .top .font12 {
+  display: inline-block;
+}
+.main .first .right .middle {
+  position: relative;
+  left: -25px;
+  font-size: 116px;
+  line-height: 116px;
+  color: #75b86b;
+  font-style: oblique;
+}
+.main .first .right .bottom .b-left {
+  float: left;
+  font-size: 55px;
+  line-height: 55px;
+  color: #cc8091;
+}
+.main .first .right .bottom .b-right {
+  position: relative;
+  top: 18px;
+  left: 5px;
+  float: left;
+}
+.main .first .right .bottom .b-right .b-r-top {
+  font-size: 21px;
+  line-height: 21px;
+  color: #cc8091;
+}
+.main .first .right .bottom .b-right .b-r-bottom {
+  font-size: 12px;
+  line-height: 12px;
+  color: #231815;
+}
+.main .second {
+  margin: 40px 0 0 0;
+  overflow: hidden;
+}
+.main .second .title {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 0 10px 0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.main .second .text {
+  font-size: 12px;
+  line-height: 16px;
+}
+.main .second .what {
+  float: left;
+  width: 260px;
+  padding: 0 30px 0 0;
+}
+.main .second .what .title {
+  color: #418c59;
+}
+.main .second .when {
+  float: left;
+  width: 230px;
+  padding: 0 30px 0 0;
+}
+.main .second .when .title {
+  color: #d2994f;
+}
+.main .second .how {
+  float: left;
+  width: 150px;
+  padding: 0 30px 0 0;
+}
+.main .second .how .title {
+  color: #cc7680;
+}
+.main .second .how .text {
+  line-height: 2em;
+}
+.main .second .how .bottom {
+  margin: 15px 0 0 0;
+}
+.main .second .how .bottom span {
+  color: #cd4a48;
+  font-style: oblique;
+}
+.main .third {
+  margin: 60px 0 0 0;
+  overflow: hidden;
+}
+.main .third .left {
+  float: left;
+  width: 434px;
+  padding: 0 20px 40px 0;
+}
+.main .third .left .title {
+  font-size: 42px;
+  line-height: 42px;
+  color: #11456b;
+  font-family: SimHei;
+  font-weight: bold;
+}
+.main .third .left .title span {
+  font-size: 72px;
+  line-height: 72px;
+  color: #f5e327;
+  font-style: oblique;
+}
+.main .third .left .title-zh {
+  margin: 10px 0 0 0;
+  font-size: 33px;
+  line-height: 33px;
+  color: #11456b;
+  font-family: SimHei;
+  font-weight: bold;
+}
+.main .third .left .hr {
+  margin: 10px 0 15px 0;
+  border-bottom: solid 2px #11456b;
+}
+.main .third .left .content {
+  overflow: hidden;
+  color: #767777;
+}
+.main .third .left .content p {
+  text-indent: 28px;
+}
+.main .third .left .content p:first-child {
+  text-indent: 0;
+}
+.main .third .left .content p:first-child:first-letter {
+  float: left;
+  font-size: 70px;
+  line-height: 70px;
+  color: #f5e327;
+  vertical-align: top;
+}
+.main .third .left .content img {
+  width: 167px;
+  float: right;
+  margin: 20px 0 0 15px;
+}
+.main .third .right {
+  float: left;
+  width: 458px;
+}
+.main .third .right .top {
+  position: relative;
+  height: 275px;
+  background-image: url(../../images/task6/b-r-1.jpg);
+  background-size: 100%;
+}
+.main .third .right .top .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 61px;
+  background-image: url(../../images/task6/bg-black.png);
+}
+.main .third .right .top .content .text {
+  overflow: hidden;
+  margin: 10px 0 0 38px;
+  border-left: solid 3px #72b16a;
+}
+.main .third .right .top .content .text p {
+  position: relative;
+  top: 15px;
+  float: left;
+  margin: 0 0 0 10px;
+  font-style: oblique;
+  color: #72b16a;
+}
+.main .third .right .top .content .text p:first-child {
+  top: 0;
+  font-style: normal;
+  color: #fff;
+  font-size: 26px;
+}
+.main .third .right .bottom {
+  overflow: hidden;
+  margin: 28px 0 0 0;
+  background-color: #eeedd6;
+}
+.main .third .right .bottom ul {
+  margin: 30px 20px 0 30px;
+}
+.main .third .right .bottom ul li {
+  margin: 0 0 25px 0;
+  overflow: hidden;
+}
+.main .third .right .bottom ul li p {
+  position: relative;
+  padding: 0 0 0 20px;
+  font-size: 16px;
+}
+.main .third .right .bottom ul li p:before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #10446b;
+}
+.main .third .right .bottom ul li p .point {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+.main .third .right .bottom ul li p .end {
+  position: relative;
+  top: 3px;
+  float: right;
+  font-size: 12px;
+  vertical-align: bottom;
+}
+.main .third .right .bottom .last-bottom {
+  height: 160px;
+  overflow: hidden;
+}
+.main .third .right .bottom .last-bottom .last-left {
+  float: left;
+  width: 260px;
+  height: 160px;
+  background-color: #d45d5c;
+  color: #fff;
+}
+.main .third .right .bottom .last-bottom .last-left .zero {
+  float: left;
+  margin: 30px 0 0 5px;
+  font-size: 110px;
+  line-height: 110px;
+}
+.main .third .right .bottom .last-bottom .last-left .one {
+  float: left;
+  width: 190px;
+  margin: 40px 0 0 0;
+  padding: 0 0 0 5px;
+  height: 86px;
+  border-left: solid 2px #fff;
+}
+.main .third .right .bottom .last-bottom .last-left .one .font21 {
+  line-height: 1.2em;
+  font-style: oblique;
+}
+.main .third .right .bottom .last-bottom .last-left .one .font12 {
+  line-height: 1.5em;
+}
+.main .third .right .bottom .last-bottom .last-right {
+  position: relative;
+  float: right;
+  width: 198px;
+  padding: 15px;
+  font-style: oblique;
+  color: #5a5b5b;
+}
+.main .third .right .bottom .last-bottom .last-right:before {
+  content: "“";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  color: #d45d5c;
+  font-size: 72px;
+}
+.main .third .right .bottom .last-bottom .last-right:after {
+  content: "“";
+  display: block;
+  position: absolute;
+  bottom: -45px;
+  right: 40px;
+  color: #d45d5c;
+  font-size: 72px;
+}
+.main footer {
+  position: relative;
+  height: 60px;
+  width: 892px;
+  margin: 0 auto;
+  border-top: solid 1px #938e8c;
+}
+.main footer p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  color: #d45d5c;
 }
