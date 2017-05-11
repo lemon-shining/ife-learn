@@ -50,6 +50,7 @@ body{
 .main{
   width: 1280px;
   margin: 0 auto;
+  background-color: #fff;
 }
 header{
   overflow: hidden;
@@ -104,5 +105,339 @@ header{
         vertical-align: middle;
       }
     }
+  }
+}
+.banner{
+  background: no-repeat url(../../images/task7/banner.jpg);
+  overflow: hidden;
+  height: 690px;
+  section{
+    margin: 230px 0 0 110px;
+    color:#fff;
+    h1{
+      font-size: 60px;
+      line-height: 60px;
+      margin: 0 0 30px 0;
+    }
+    p{
+      font-size: 21px;
+      line-height: 1.5em;
+    }
+    a{
+      display: block;
+      margin: 60px 0 0 0;
+      width: 330px;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      background-color: @primary;
+    }
+  }
+}
+.intro{
+  li{
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    color:#767777;
+    text-align: center;
+    i{
+      margin: 45px auto;
+    }
+    p{
+      padding: 0 80px;
+      margin: 0 0 65px 0;
+      border-right: solid 2px #bbb;
+      height: 50px;
+    }
+    &:last-child{
+      p{
+        border-right: 0;
+      }
+    }
+  }
+}
+.what{
+  text-align: center;
+  overflow: hidden;
+  background-color: #ededec;
+  i{
+    margin: 90px auto 50px auto;
+  }
+  p{
+    color:#a1a1a1;
+    font-size: 54px;
+    line-height: 54px;
+    margin: 0 0 80px 0;
+  }
+}
+.city-con{
+  height: 341px;
+  overflow: hidden;
+  background: no-repeat url(../../images/task7/city-bg.jpg);
+  text-align: center;
+  color:#fff;
+  h2{
+    font-size: 21px;
+    line-height: 21px;
+    margin: 53px 0 0 0;
+  }
+  .hr{
+    width: 30px;
+    margin: 0 auto 20px auto;
+    height: 3px;
+    background-color: #fff;
+  }
+  p{
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0 0 53px 0;
+  }
+  .form{
+    overflow: hidden;
+    margin: 0 110px;
+    li{
+      float: left;
+      width: 25%;
+      padding: 0 15px;
+      .select-con{
+        position: relative;
+        select{
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+          display: block;
+          text-align: left;
+          height: 35px;
+          line-height: 35px;
+          color:#89898a;
+          padding: 0 30px 0 10px;
+          width: 100%;
+          outline-color: @primary;
+          &::-ms-expand { display: none; }
+          option{
+            background-color: #e4e3e5;
+          }
+        }
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 9px;
+          right: 10px;
+          width: 19px;
+          height: 18px;
+          background-image: url(../../images/task7/arrow.png);
+        }
+      }
+      a{
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        background-color: @primary;
+        color:#fff;
+      }
+    }
+  }
+}
+.info{
+  height: 605px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  ul{
+    margin: 100px 130px 0 130px;
+    li{
+      float: left;
+      width: 25%;
+      padding: 0 19px;
+      text-align: center;
+      color:#666;
+      .img-con{
+        background-color: #fff;
+        padding: 13px 7px;
+        min-height: 341px;
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+      h2{
+        margin: 10px 0 5px 0;
+        font-size: 14px;
+      }
+      p{
+        font-size: 12px;
+      }
+      &.cur{
+        h2{
+          margin:0 0 10px 0;
+          font-size: 21px;
+          font-weight: 400;
+        }
+        p{
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}
+.new-world{
+  .left{
+    float: left;
+    position: relative;
+    width: 851px;
+    height: 567px;
+    background: no-repeat url(../../images/task7/news-world-bg.jpg);
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 0;
+      height: 0;
+      margin: -10px 0 0 0;
+      border-top: 10px solid transparent;
+      border-right: 20px solid #fff;
+      border-bottom: 10px solid transparent;
+    }
+  }
+  .right{
+    float: right;
+    width: 429px;
+    .img{
+      display: block;
+      width: 103px;
+      margin: 165px auto 0 auto;
+    }
+    p{
+      width: 290px;
+      margin: 30px auto 0 auto;
+      line-height: 40px;
+      font-size: 12px;
+      color:#aaa;
+    }
+    .btn{
+      display: block;
+      height: 32px;
+      width: 103px;
+      line-height: 32px;
+      margin: 30px auto 0 auto;
+      text-align: center;
+      font-size: 12px;
+      color: @primary;
+      border: solid 1px @primary;
+    }
+    ul{
+      overflow: hidden;
+      margin: 25px auto 0 auto;
+      width: 72px;
+      li{
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin: 0 7px;
+        border: solid 1px #929293;
+        border-radius: 10px;
+        &.cur{
+          background-color: #929293;
+        }
+      }
+    }
+  }
+}
+.about{
+  .left{
+    float: left;
+    width: 852px;
+    font-size: 21px;
+    text-align: center;
+    p{
+      margin: 168px auto 0 auto;
+      line-height: 1.5em;
+    }
+    .hr{
+      width: 30px;
+      height: 2px;
+      margin: 25px auto 0 auto;
+      background-color: #fff;
+    }
+    .btn{
+      display: block;
+      margin: 25px auto 0 auto;
+      width: 168px;
+      height: 42px;
+      line-height: 42px;
+      border: solid 1px #fff;
+    }
+    .bg-pra{
+      float: left;
+      width: 50%;
+      height: 521px;
+      background-color: @primary;
+      color:#fff;
+      a{
+        color: #fff;
+      }
+    }
+    .bg-ff{
+      float: right;
+      width: 50%;
+      height: 521px;
+      background-color: #fff;
+      color:#323333;
+      .hr{
+        background-color: #ababab;
+      }
+      .btn{
+        color: @primary;
+        border: solid 1px @primary;
+      }
+    }
+  }
+  .right{
+    position: relative;
+    width: 428px;
+    height: 521px;
+    float: right;
+    background: no-repeat url(../../images/task7/about-bg.jpg);
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: -10px 0 0 0;
+      border-top: 10px solid transparent;
+      border-left: 20px solid #fff;
+      border-bottom: 10px solid transparent;
+    }
+  }
+}
+.join-us{
+  h2{
+    margin: 120px auto 0 auto;
+    font-size: 21px;
+    line-height: 21px;
+    color:#323333;
+    text-align: center;
+  }
+  .hr{
+    width: 30px;
+    height: 2px;
+    background-color: @primary;
+    margin: 10px auto 0 auto;
+  }
+  .head-intro{
+    margin: 15px auto 0 auto;
+    width: 420px;
+    color:#aaa;
+  }
+  body{
+    margin: 90px auto 0 auto;
   }
 }

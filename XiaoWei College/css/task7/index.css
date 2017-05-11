@@ -48,6 +48,7 @@ body {
 .main {
   width: 1280px;
   margin: 0 auto;
+  background-color: #fff;
 }
 header {
   overflow: hidden;
@@ -106,4 +107,328 @@ header .right .login a {
 header .right .login i,
 header .right .login span {
   vertical-align: middle;
+}
+.banner {
+  background: no-repeat url(../../images/task7/banner.jpg);
+  overflow: hidden;
+  height: 690px;
+}
+.banner section {
+  margin: 230px 0 0 110px;
+  color: #fff;
+}
+.banner section h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0 0 30px 0;
+}
+.banner section p {
+  font-size: 21px;
+  line-height: 1.5em;
+}
+.banner section a {
+  display: block;
+  margin: 60px 0 0 0;
+  width: 330px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  background-color: #e74f4d;
+}
+.intro li {
+  float: left;
+  width: 25%;
+  overflow: hidden;
+  color: #767777;
+  text-align: center;
+}
+.intro li i {
+  margin: 45px auto;
+}
+.intro li p {
+  padding: 0 80px;
+  margin: 0 0 65px 0;
+  border-right: solid 2px #bbb;
+  height: 50px;
+}
+.intro li:last-child p {
+  border-right: 0;
+}
+.what {
+  text-align: center;
+  overflow: hidden;
+  background-color: #ededec;
+}
+.what i {
+  margin: 90px auto 50px auto;
+}
+.what p {
+  color: #a1a1a1;
+  font-size: 54px;
+  line-height: 54px;
+  margin: 0 0 80px 0;
+}
+.city-con {
+  height: 341px;
+  overflow: hidden;
+  background: no-repeat url(../../images/task7/city-bg.jpg);
+  text-align: center;
+  color: #fff;
+}
+.city-con h2 {
+  font-size: 21px;
+  line-height: 21px;
+  margin: 53px 0 0 0;
+}
+.city-con .hr {
+  width: 30px;
+  margin: 0 auto 20px auto;
+  height: 3px;
+  background-color: #fff;
+}
+.city-con p {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0 0 53px 0;
+}
+.city-con .form {
+  overflow: hidden;
+  margin: 0 110px;
+}
+.city-con .form li {
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+}
+.city-con .form li .select-con {
+  position: relative;
+}
+.city-con .form li .select-con select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  text-align: left;
+  height: 35px;
+  line-height: 35px;
+  color: #89898a;
+  padding: 0 30px 0 10px;
+  width: 100%;
+  outline-color: #e74f4d;
+}
+.city-con .form li .select-con select::-ms-expand {
+  display: none;
+}
+.city-con .form li .select-con select option {
+  background-color: #e4e3e5;
+}
+.city-con .form li .select-con:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 19px;
+  height: 18px;
+  background-image: url(../../images/task7/arrow.png);
+}
+.city-con .form li a {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  background-color: #e74f4d;
+  color: #fff;
+}
+.info {
+  height: 605px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+.info ul {
+  margin: 100px 130px 0 130px;
+}
+.info ul li {
+  float: left;
+  width: 25%;
+  padding: 0 19px;
+  text-align: center;
+  color: #666;
+}
+.info ul li .img-con {
+  background-color: #fff;
+  padding: 13px 7px;
+  min-height: 341px;
+}
+.info ul li .img-con img {
+  display: block;
+  width: 100%;
+}
+.info ul li h2 {
+  margin: 10px 0 5px 0;
+  font-size: 14px;
+}
+.info ul li p {
+  font-size: 12px;
+}
+.info ul li.cur h2 {
+  margin: 0 0 10px 0;
+  font-size: 21px;
+  font-weight: 400;
+}
+.info ul li.cur p {
+  margin: 0 0 10px 0;
+}
+.new-world .left {
+  float: left;
+  position: relative;
+  width: 851px;
+  height: 567px;
+  background: no-repeat url(../../images/task7/news-world-bg.jpg);
+}
+.new-world .left:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: -10px 0 0 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid #fff;
+  border-bottom: 10px solid transparent;
+}
+.new-world .right {
+  float: right;
+  width: 429px;
+}
+.new-world .right .img {
+  display: block;
+  width: 103px;
+  margin: 165px auto 0 auto;
+}
+.new-world .right p {
+  width: 290px;
+  margin: 30px auto 0 auto;
+  line-height: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+.new-world .right .btn {
+  display: block;
+  height: 32px;
+  width: 103px;
+  line-height: 32px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #e74f4d;
+  border: solid 1px #e74f4d;
+}
+.new-world .right ul {
+  overflow: hidden;
+  margin: 25px auto 0 auto;
+  width: 72px;
+}
+.new-world .right ul li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 0 7px;
+  border: solid 1px #929293;
+  border-radius: 10px;
+}
+.new-world .right ul li.cur {
+  background-color: #929293;
+}
+.about .left {
+  float: left;
+  width: 852px;
+  font-size: 21px;
+  text-align: center;
+}
+.about .left p {
+  margin: 168px auto 0 auto;
+  line-height: 1.5em;
+}
+.about .left .hr {
+  width: 30px;
+  height: 2px;
+  margin: 25px auto 0 auto;
+  background-color: #fff;
+}
+.about .left .btn {
+  display: block;
+  margin: 25px auto 0 auto;
+  width: 168px;
+  height: 42px;
+  line-height: 42px;
+  border: solid 1px #fff;
+}
+.about .left .bg-pra {
+  float: left;
+  width: 50%;
+  height: 521px;
+  background-color: #e74f4d;
+  color: #fff;
+}
+.about .left .bg-pra a {
+  color: #fff;
+}
+.about .left .bg-ff {
+  float: right;
+  width: 50%;
+  height: 521px;
+  background-color: #fff;
+  color: #323333;
+}
+.about .left .bg-ff .hr {
+  background-color: #ababab;
+}
+.about .left .bg-ff .btn {
+  color: #e74f4d;
+  border: solid 1px #e74f4d;
+}
+.about .right {
+  position: relative;
+  width: 428px;
+  height: 521px;
+  float: right;
+  background: no-repeat url(../../images/task7/about-bg.jpg);
+}
+.about .right:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: -10px 0 0 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #fff;
+  border-bottom: 10px solid transparent;
+}
+.join-us h2 {
+  margin: 120px auto 0 auto;
+  font-size: 21px;
+  line-height: 21px;
+  color: #323333;
+  text-align: center;
+}
+.join-us .hr {
+  width: 30px;
+  height: 2px;
+  background-color: #e74f4d;
+  margin: 10px auto 0 auto;
+}
+.join-us .head-intro {
+  margin: 15px auto 0 auto;
+  width: 420px;
+  color: #aaa;
+}
+.join-us body {
+  margin: 90px auto 0 auto;
 }
