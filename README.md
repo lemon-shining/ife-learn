@@ -15,3 +15,5 @@
 5.任务五：零基础HTML及CSS编码（二） XiaoWei College/views/task5
 
 6.任务六：通过HTML及CSS模拟报纸排版 XiaoWei College/views/task6
+
+7.任务七：实现常见的技术产品官网的页面架构及样式布局 XiaoWei College/views/task6
