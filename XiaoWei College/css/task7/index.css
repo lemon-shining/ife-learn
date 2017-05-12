@@ -45,6 +45,31 @@ body {
   height: 18px;
   background-position: 0 -176px;
 }
+.icons.icon-arr-down-gray {
+  width: 10px;
+  height: 6px;
+  background-position: 0 -195px;
+}
+.icons.icon-qq {
+  width: 24px;
+  height: 25px;
+  background-position: 0 -201px;
+}
+.icons.icon-wb {
+  width: 29px;
+  height: 25px;
+  background-position: -25px -201px;
+}
+.icons.icon-tt {
+  width: 29px;
+  height: 25px;
+  background-position: -57px -201px;
+}
+.icons.icon-dq {
+  width: 24px;
+  height: 25px;
+  background-position: -86px -201px;
+}
 .main {
   width: 1280px;
   margin: 0 auto;
@@ -411,6 +436,9 @@ header .right .login span {
   border-left: 20px solid #fff;
   border-bottom: 10px solid transparent;
 }
+.join-us {
+  padding: 0 0 160px 0;
+}
 .join-us h2 {
   margin: 120px auto 0 auto;
   font-size: 21px;
@@ -429,6 +457,149 @@ header .right .login span {
   width: 420px;
   color: #aaa;
 }
-.join-us body {
+.join-us .body {
+  width: 1000px;
   margin: 90px auto 0 auto;
+}
+.join-us .body .clause {
+  width: 290px;
+  float: left;
+}
+.join-us .body .clause .item {
+  margin: 0 0 25px 0;
+  color: #231815;
+}
+.join-us .body .clause .item h3 {
+  line-height: 14px;
+  opacity: .8;
+}
+.join-us .body .clause .item p {
+  margin: 20px 0 0 0;
+  line-height: 2em;
+  font-size: 12px;
+  opacity: .6;
+}
+.join-us .body .clause .item p.more {
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+}
+.join-us .body .clause .item p.more i {
+  margin: 0 5px 0 0;
+}
+.join-us .body .clause .item:last-child {
+  margin: 0;
+}
+.join-us .body .form {
+  float: right;
+  width: 660px;
+}
+.join-us .body .form .form-group {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  margin: 0 0 15px 0;
+}
+.join-us .body .form .form-group input {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
+  background-color: #ededee;
+  outline: none;
+  border: 0;
+}
+.join-us .body .form textarea {
+  display: block;
+  width: 640px;
+  height: 120px;
+  padding: 10px 20px;
+  margin: 0 10px 15px 10px;
+  background-color: #ededee;
+  border: 0;
+  resize: none;
+  outline: none;
+}
+.join-us .body .form .btn {
+  display: block;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  color: #323333;
+  background-color: #ededee;
+}
+.contact-us {
+  background-color: #32363e;
+  color: #fff;
+  text-align: center;
+  padding: 90px 0 70px 0;
+}
+.contact-us h2 {
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0 0 13px 0;
+}
+.contact-us p {
+  width: 470px;
+  font-size: 12px;
+  line-height: 1.5em;
+  margin: 0 auto 25px auto;
+}
+.contact-us .form-group {
+  position: relative;
+  width: 510px;
+  margin: 0 auto 35px auto;
+}
+.contact-us .form-group input {
+  float: left;
+  display: block;
+  width: 430px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  padding: 0 10px;
+  outline: none;
+}
+.contact-us .form-group a {
+  float: right;
+  display: block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #6f7278;
+}
+.contact-us ul {
+  width: 200px;
+  margin: 0 auto;
+}
+.contact-us ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.contact-us ul li a {
+  display: block;
+}
+.contact-us ul li i {
+  vertical-align: middle;
+}
+footer {
+  background-color: #2f2f38;
+  height: 56px;
+  padding: 30px 0 0 0;
+  color: #fff;
+}
+footer p {
+  float: left;
+  margin: 0 0 0 100px;
+}
+footer a {
+  display: block;
+  float: right;
+  margin: 0 40px 0 0;
+  color: #fff;
 }

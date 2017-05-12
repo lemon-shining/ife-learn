@@ -46,6 +46,32 @@ body{
     height: 18px;
     background-position: 0 -176px;
   }
+  &.icon-arr-down-gray{
+    width: 10px;
+    height: 6px;
+    background-position: 0 -195px;
+  }
+
+  &.icon-qq{
+    width: 24px;
+    height: 25px;
+    background-position: 0 -201px;
+  }
+  &.icon-wb{
+    width: 29px;
+    height: 25px;
+    background-position: -25px -201px;
+  }
+  &.icon-tt{
+    width: 29px;
+    height: 25px;
+    background-position: -57px -201px;
+  }
+  &.icon-dq{
+    width: 24px;
+    height: 25px;
+    background-position: -86px -201px;
+  }
 }
 .main{
   width: 1280px;
@@ -419,6 +445,7 @@ header{
   }
 }
 .join-us{
+  padding: 0 0 160px 0;
   h2{
     margin: 120px auto 0 auto;
     font-size: 21px;
@@ -437,7 +464,150 @@ header{
     width: 420px;
     color:#aaa;
   }
-  body{
+  .body{
+    width: 1000px;
     margin: 90px auto 0 auto;
+    .clause{
+      width: 290px;
+      float:left;
+      .item{
+        margin: 0 0 25px 0;
+        color:#231815;
+        h3{
+          line-height: 14px;
+          opacity: .8;
+        }
+        p{
+          margin: 20px 0 0 0;
+          line-height: 2em;
+          font-size: 12px;
+          opacity: .6;
+          &.more{
+            margin: 0;
+            text-align: right;
+            font-size: 12px;
+            i{
+              margin: 0 5px 0 0;
+            }
+          }
+        }
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+    .form{
+      float: right;
+      width: 660px;
+      .form-group{
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        margin: 0 0 15px 0;
+        input{
+          display: block;
+          width: 100%;
+          font-size: 12px;
+          padding: 15px;
+          background-color: #ededee;
+          outline: none;
+          border: 0;
+        }
+      }
+      textarea{
+        display: block;
+        width: 640px;
+        height: 120px;
+        padding: 10px 20px;
+        margin: 0 10px 15px 10px;
+        background-color: #ededee;
+        border: 0;
+        resize: none;
+        outline: none;
+      }
+      .btn{
+        display: block;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        color: #323333;
+        background-color: #ededee;
+      }
+    }
+  }
+}
+.contact-us{
+  background-color: #32363e;
+  color:#fff;
+  text-align: center;
+  padding: 90px 0 70px 0;
+  h2{
+    font-size: 21px;
+    line-height: 21px;
+    margin: 0 0 13px 0;
+  }
+  p{
+    width: 470px;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin: 0 auto 25px auto;
+  }
+  .form-group{
+    position: relative;
+    width: 510px;
+    margin: 0 auto 35px auto;
+    input{
+      float: left;
+      display: block;
+      width: 430px;
+      height: 40px;
+      line-height: 40px;
+      border: 0;
+      padding: 0 10px;
+      outline: none;
+    }
+    a{
+      float: right;
+      display: block;
+      width: 80px;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      background-color: #6f7278;
+    }
+  }
+  ul{
+    width: 200px;
+    margin: 0 auto;
+    li{
+      float: left;
+      width: 25%;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      a{
+        display: block;
+      }
+      i{
+        vertical-align: middle;
+      }
+    }
+  }
+}
+footer{
+  background-color: #2f2f38;
+  height: 56px;
+  padding: 30px 0 0 0;
+  color:#fff;
+  p{
+    float: left;
+    margin: 0 0 0 100px;
+  }
+  a{
+    display: block;
+    float: right;
+    margin: 0 40px 0 0;
+    color:#fff;
   }
 }
