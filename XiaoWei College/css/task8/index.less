@@ -1,0 +1,43 @@
+@md:md;
+//Ñ­»·ÑùÊ½
+.col-md-while(@max, @i:1) when (@i <= @max) {
+  .col-md-@{i}{
+    float: left;
+    width: (@i * 100% / @max);
+    margin: 10px;
+    border: solid 1px #999;
+    background-color: #eee;
+    min-height: 60px;
+  }
+  .col-md-while(@max,(@i + 1));
+}
+.col-sm-while(@max, @i:1) when (@i <= @max) {
+  .col-sm-@{i}{
+    float: left;
+    width: (@i * 100% / @max);
+    padding: 10px;
+    border: solid 1px #999;
+    background-color: #eee;
+    min-height: 60px;
+  }
+  .col-sm-while(@max,(@i + 1));
+}
+
+body{
+  background-color: #fff;
+}
+.row{
+  overflow: hidden;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .row{
+    .col-md-while(12);
+  }
+}
+@media (max-width: 767px) {
+  .row {
+    .col-sm-while(12);
+  }
+}
