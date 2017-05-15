@@ -1,0 +1,345 @@
+.tree(@max,@i:1) when (@i<=@max){
+  .tree-@{i}{
+    height: 16px;
+    font-size: 12px;
+    margin: 18px 0;
+    padding: 0 0 0 (40px+(@i*30px));
+    color:#6e8095;
+    i,span{
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+    .cur{
+      color:#fff;
+    }
+  }
+  .act{
+    .tree-@{i}{
+      height: 16px;
+      font-size: 12px;
+      margin: 10px 0;
+      padding: 0 0 0 (40px+(@i*30px));
+      i,span{
+        vertical-align: middle;
+      }
+    }
+  }
+  .tree(@max,(@i+1));
+}
+
+.icons{
+  display: inline-block;
+  background-image: url(../../images/task9/icons.png);
+  &.icon-logo{
+    width: 36px;
+    height: 36px;
+    background-position: 0 0;
+  }
+  &.icon-search{
+    width: 18px;
+    height: 19px;
+    background-position: 0 -36px;
+  }
+  &.icon-login{
+    width: 18px;
+    height: 19px;
+    background-position: -18px -36px;
+  }
+  &.icon-cur-folder-top{
+    width: 12px;
+    height: 12px;
+    background-position: 0 -55px;
+  }
+  &.icon-cur-folder{
+    width: 12px;
+    height: 12px;
+    background-position: -12px -55px;
+  }
+  &.icon-cur-file{
+    width: 12px;
+    height: 12px;
+    background-position: -24px -55px;
+  }
+  &.icon-cur-down{
+    width: 12px;
+    height: 12px;
+    background-position: -36px -55px;
+  }
+  &.icon-folder{
+    width: 12px;
+    height: 12px;
+    background-position: -12px -67px;
+  }
+  &.icon-file{
+    width: 12px;
+    height: 12px;
+    background-position: -24px -67px;
+  }
+  &.icon-right{
+    width: 12px;
+    height: 12px;
+    background-position: -48px -67px;
+  }
+  &.icon-star{
+    width: 12px;
+    height: 12px;
+    background-position: -60px -67px;
+  }
+  &.icon-share{
+    width: 12px;
+    height: 12px;
+    background-position: -72px -67px;
+  }
+  &.icon-info{
+    width: 12px;
+    height: 12px;
+    background-position: -84px -67px;
+  }
+  &.icon-date{
+    width: 32px;
+    height: 32px;
+    background-position: 0 -79px;
+  }
+  &.icon-exchange{
+    width: 27px;
+    height: 37px;
+    background-position: 0 -111px;
+  }
+  &.arrow-left{
+    width: 10px;
+    height: 17px;
+    background-position: 0 -153px;
+  }
+  &.arrow-right{
+    width: 10px;
+    height: 17px;
+    background-position: -10px -153px;
+  }
+}
+.font16{
+  font-size: 16px;
+  line-height: 16px;
+}
+.font12{
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.select-con{
+  display: inline-block;
+  position: relative;
+  select.form-control{
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    display: inline-block;
+    width: 100%;
+    padding: 2px 25px 2px 10px;
+    outline: none;
+    color:#323333;
+  }
+  &:after{
+    position: absolute;
+    top:12px;
+    right: 10px;
+    content: "";
+    display: block;
+    width: 9px;
+    height: 5px;
+  }
+  &.select-blue{
+    &:after{
+      background: url(../../images/task9/select-blue.png);
+      background-size: cover;
+    }
+  }
+  &.select-black{
+    &:after{
+      background: url(../../images/task9/select-black.png);
+      background-size: cover;
+    }
+  }
+  &.select-date{
+    &:after{
+      background: url(../../images/task9/select-date.png);
+      background-size: cover;
+    }
+  }
+}
+input.form-control{
+  outline: none;
+  border:solid 1px #dddede;
+  height: 26px;
+  line-height: 26px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+body{
+  background-color: #eeeeed;
+}
+header{
+  width: 100%;
+  height: 55px;
+  padding: 0 94px 0 50px;
+  background-color: #2189bf;
+  color: #fff;
+  overflow: hidden;
+  .icon-logo{
+    float: left;
+    margin: 10px 0 0 0;
+  }
+  .right{
+    float: right;
+    height: 55px;
+    overflow: hidden;
+    .input-group{
+      float: left;
+      position: relative;
+      margin:14px 20px 0 0;
+      input{
+        display: block;
+        width: 310px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 10px 0 40px;
+        border: 0;
+        border-radius: 30px;
+        outline: none;
+        background-color: #fff;
+      }
+      i{
+        position: absolute;
+        top: 6px;
+        left: 17px;
+      }
+    }
+    .login-con{
+      float: right;
+      height: 55px;
+      line-height: 55px;
+      cursor: pointer;
+      .icon-login,
+      span{
+        vertical-align: middle;
+      }
+      .icon-login{
+        margin: 0 5px 0 0;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+  }
+}
+.main{
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1280px;
+}
+.sidebar{
+  width: 260px;
+  height: 100%;
+  float: left;
+  background-color: #2a2e3d;
+  overflow: hidden;
+  .head-info{
+    overflow: hidden;
+    margin: 18px 0 24px 0;
+    .head-con{
+      float: left;
+      overflow: hidden;
+      margin: 0 0 0 44px;
+      padding: 3px;
+      width: 56px;
+      height: 56px;
+      border-radius: 56px;
+      border: solid 1px #b9babe;
+      .head{
+        width: 100%;
+        height: 100%;
+        border-radius: 56px;
+        background-color: #b9babe;
+      }
+    }
+    .name{
+      float: right;
+      margin: 0 90px 0 0;
+      height: 58px;
+      line-height: 58px;
+      color: #f6f5f5;
+      font-size: 16px;
+    }
+  }
+  .star-info{
+    margin: 0 0 22px 0;
+    color: #6e8095;
+    overflow: hidden;
+    text-align: center;
+    .star{
+      float: left;
+      margin: 0 0 0 60px;
+    }
+    .hr{
+      float: left;
+      margin: 0 30px;
+      width: 2px;
+      height: 30px;
+      background-color: #313545;
+    }
+    .fans{
+      float: left;
+    }
+  }
+
+  .tree(3);
+  .act{
+    background-color: #383d4e;
+    overflow: hidden;
+  }
+
+}
+.container{
+  width: 1020px;
+  float: right;
+  .nav{
+    background-color: #fff;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 0 30px;
+    color:#aaa;
+    a{
+      color:#6898c2;
+    }
+  }
+  .main-right{
+    padding: 20px 70px 20px 60px;
+    .filter{
+      background-color: #fff;
+      border: solid 1px #e5e6e6;
+      padding: 15px 0;
+      overflow: hidden;
+      .item{
+        margin: 0 0 0 30px;
+        float: left;
+        span{
+          display: inline-block;
+          margin: 0 10px 0 0;
+          color:#aaa;
+        }
+        .person{
+          float: left;
+          div:first-child{
+            margin: 0 0 5px 0;
+          }
+        }
+        .icon-exchange{
+          float: left;
+          cursor: pointer;
+          margin: 10px 0 0 5px;
+        }
+      }
+    }
+  }
+}
