@@ -1,13 +1,9 @@
-@md:md;
-//Ñ­»·ÑùÊ½
+//å¾ªçŽ¯è¾“å‡º
 .col-md-while(@max, @i:1) when (@i <= @max) {
   .col-md-@{i}{
     float: left;
     width: (@i * 100% / @max);
-    margin: 10px;
-    border: solid 1px #999;
-    background-color: #eee;
-    min-height: 60px;
+    padding: 10px;
   }
   .col-md-while(@max,(@i + 1));
 }
@@ -16,9 +12,6 @@
     float: left;
     width: (@i * 100% / @max);
     padding: 10px;
-    border: solid 1px #999;
-    background-color: #eee;
-    min-height: 60px;
   }
   .col-sm-while(@max,(@i + 1));
 }
@@ -29,6 +22,11 @@ body{
 .row{
   overflow: hidden;
   padding: 10px;
+  .content{
+    border: solid 1px #999;
+    background-color: #eee;
+    min-height: 40px;
+  }
 }
 
 @media (min-width: 768px) {
