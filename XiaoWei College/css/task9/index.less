@@ -27,6 +27,12 @@
   .tree(@max,(@i+1));
 }
 
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
 .icons{
   display: inline-block;
   background-image: url(../../images/task9/icons.png);
@@ -105,12 +111,12 @@
     height: 37px;
     background-position: 0 -111px;
   }
-  &.arrow-left{
+  &.icon-arrow-left{
     width: 10px;
     height: 17px;
     background-position: 0 -153px;
   }
-  &.arrow-right{
+  &.icon-arrow-right{
     width: 10px;
     height: 17px;
     background-position: -10px -153px;
@@ -338,6 +344,182 @@ header{
           float: left;
           cursor: pointer;
           margin: 10px 0 0 5px;
+        }
+        .btn{
+          display: block;
+          color:#fff;
+          width: 50px;
+          height: 26px;
+          line-height: 26px;
+          background-color: #388ac1;
+          text-align: center;
+          margin: 20px 0 0 0;
+          border-radius: 2px;
+        }
+      }
+    }
+    .history-con{
+      margin: 10px 0 0 0;
+      overflow: hidden;
+      .prev,
+      .next,
+      .history-btn{
+        float:left;
+        width: 30px;
+        height: 64px;
+        margin: 0 0 0 4px;
+        line-height: 64px;
+        text-align: center;
+        border-top:solid 1px #dcdedf;
+        border-left: solid 1px #dcdedf;
+        background-color: #fff;
+        cursor: pointer;
+        i{
+          vertical-align: middle;
+        }
+      }
+      .list{
+        float: left;
+        overflow: hidden;
+        li{
+          float: left;
+          margin: 0 0 0 5px;
+          width: 110px;
+          height: 64px;
+          text-align: center;
+          border-top:solid 1px #dcdedf;
+          border-left: solid 1px #dcdedf;
+          background-color: #fff;
+          cursor: pointer;
+          .time{
+            margin: 14px 0 0 0;
+            font-size: 12px;
+            color:#323333;
+          }
+          .money-con{
+            color: #aaa;
+            font-size: 16px;
+            .money{
+              font-size: 21px;
+              color: #ec6500;
+            }
+          }
+          &.cur{
+            border-top: solid 4px #4388c8;
+            .time{
+              margin: 11px 0 0 0;
+            }
+          }
+        }
+      }
+      .prev{
+        margin: 0;
+      }
+      .history-btn{
+        width: 130px;
+        font-size: 12px;
+        color:#535353;
+        span{
+          margin: 0 0 0 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+    .month-count{
+      margin: 20px 0 0 0;
+      .title{
+        font-size: 12px;
+        color: #323333;
+        line-height: 1.5em;
+      }
+      ul{
+        overflow: hidden;
+        li{
+          float: left;
+          width: 200px;
+          height: 70px;
+          border: solid 1px #d8d9db;
+          overflow: hidden;
+          margin: 0 30px 0 0;
+          background-color: #fff;
+          border-radius: 2px;
+          .left{
+            float: left;
+            margin: 15px 0 0 10px;
+            font-size: 12px;
+            .num{
+              color: #323333;
+            }
+            .remark{
+              margin: 5px 0 0 0;
+              font-size: 10px;
+              color: #aaa;
+            }
+          }
+          .right{
+            float: right;
+            width: 60px;
+            height: 45px;
+            margin: 10px 15px 0 0;
+          }
+          &.item1{
+            border-left:solid 1px #43b29e;
+            .right{
+              background-color: #43b29e;
+            }
+          }
+          &.item2{
+            border-left:solid 1px #388ac1;
+            .right{
+              background-color: #388ac1;
+            }
+          }
+          &.item3{
+            border-left:solid 1px #d04a36;
+            .right{
+              background-color: #d04a36;
+            }
+          }
+          &.item4{
+            border-left:solid 1px #e1cc46;
+            .right{
+              background-color: #e1cc46;
+            }
+          }
+          &:last-child{
+            margin: 0;
+          }
+        }
+      }
+    }
+    .project-info{
+      margin: 15px 0 0 0;
+      .project-left,
+      .project-right{
+        float: left;
+        width: 530px;
+        border: solid 1px #d8d9db;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+        .title{
+          background-color: #f4f5f7;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 40px;
+          color: #aaa;
+        }
+      }
+      .project-left{
+        .info-con{
+
+        }
+      }
+      .project-right{
+        float: right;
+        width: 350px;
+        .info-con{
+
         }
       }
     }

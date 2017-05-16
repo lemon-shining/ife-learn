@@ -77,12 +77,12 @@
   height: 37px;
   background-position: 0 -111px;
 }
-.icons.arrow-left {
+.icons.icon-arrow-left {
   width: 10px;
   height: 17px;
   background-position: 0 -153px;
 }
-.icons.arrow-right {
+.icons.icon-arrow-right {
   width: 10px;
   height: 17px;
   background-position: -10px -153px;
@@ -377,4 +377,175 @@ header .right .login-con span {
   float: left;
   cursor: pointer;
   margin: 10px 0 0 5px;
+}
+.container .main-right .filter .item .btn {
+  display: block;
+  color: #fff;
+  width: 50px;
+  height: 26px;
+  line-height: 26px;
+  background-color: #388ac1;
+  text-align: center;
+  margin: 20px 0 0 0;
+  border-radius: 2px;
+}
+.container .main-right .history-con {
+  margin: 10px 0 0 0;
+  overflow: hidden;
+}
+.container .main-right .history-con .prev,
+.container .main-right .history-con .next,
+.container .main-right .history-con .history-btn {
+  float: left;
+  width: 30px;
+  height: 64px;
+  margin: 0 0 0 4px;
+  line-height: 64px;
+  text-align: center;
+  border-top: solid 1px #dcdedf;
+  border-left: solid 1px #dcdedf;
+  background-color: #fff;
+  cursor: pointer;
+}
+.container .main-right .history-con .prev i,
+.container .main-right .history-con .next i,
+.container .main-right .history-con .history-btn i {
+  vertical-align: middle;
+}
+.container .main-right .history-con .list {
+  float: left;
+  overflow: hidden;
+}
+.container .main-right .history-con .list li {
+  float: left;
+  margin: 0 0 0 5px;
+  width: 110px;
+  height: 64px;
+  text-align: center;
+  border-top: solid 1px #dcdedf;
+  border-left: solid 1px #dcdedf;
+  background-color: #fff;
+  cursor: pointer;
+}
+.container .main-right .history-con .list li .time {
+  margin: 14px 0 0 0;
+  font-size: 12px;
+  color: #323333;
+}
+.container .main-right .history-con .list li .money-con {
+  color: #aaa;
+  font-size: 16px;
+}
+.container .main-right .history-con .list li .money-con .money {
+  font-size: 21px;
+  color: #ec6500;
+}
+.container .main-right .history-con .list li.cur {
+  border-top: solid 4px #4388c8;
+}
+.container .main-right .history-con .list li.cur .time {
+  margin: 11px 0 0 0;
+}
+.container .main-right .history-con .prev {
+  margin: 0;
+}
+.container .main-right .history-con .history-btn {
+  width: 130px;
+  font-size: 12px;
+  color: #535353;
+}
+.container .main-right .history-con .history-btn span {
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+}
+.container .main-right .month-count {
+  margin: 20px 0 0 0;
+}
+.container .main-right .month-count .title {
+  font-size: 12px;
+  color: #323333;
+  line-height: 1.5em;
+}
+.container .main-right .month-count ul {
+  overflow: hidden;
+}
+.container .main-right .month-count ul li {
+  float: left;
+  width: 200px;
+  height: 70px;
+  border: solid 1px #d8d9db;
+  overflow: hidden;
+  margin: 0 30px 0 0;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.container .main-right .month-count ul li .left {
+  float: left;
+  margin: 15px 0 0 10px;
+  font-size: 12px;
+}
+.container .main-right .month-count ul li .left .num {
+  color: #323333;
+}
+.container .main-right .month-count ul li .left .remark {
+  margin: 5px 0 0 0;
+  font-size: 10px;
+  color: #aaa;
+}
+.container .main-right .month-count ul li .right {
+  float: right;
+  width: 60px;
+  height: 45px;
+  margin: 10px 15px 0 0;
+}
+.container .main-right .month-count ul li.item1 {
+  border-left: solid 1px #43b29e;
+}
+.container .main-right .month-count ul li.item1 .right {
+  background-color: #43b29e;
+}
+.container .main-right .month-count ul li.item2 {
+  border-left: solid 1px #388ac1;
+}
+.container .main-right .month-count ul li.item2 .right {
+  background-color: #388ac1;
+}
+.container .main-right .month-count ul li.item3 {
+  border-left: solid 1px #d04a36;
+}
+.container .main-right .month-count ul li.item3 .right {
+  background-color: #d04a36;
+}
+.container .main-right .month-count ul li.item4 {
+  border-left: solid 1px #e1cc46;
+}
+.container .main-right .month-count ul li.item4 .right {
+  background-color: #e1cc46;
+}
+.container .main-right .month-count ul li:last-child {
+  margin: 0;
+}
+.container .main-right .project-info {
+  margin: 15px 0 0 0;
+}
+.container .main-right .project-info .project-left,
+.container .main-right .project-info .project-right {
+  float: left;
+  width: 530px;
+  border: solid 1px #d8d9db;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.container .main-right .project-info .project-left .title,
+.container .main-right .project-info .project-right .title {
+  background-color: #f4f5f7;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  color: #aaa;
+}
+.container .main-right .project-info .project-right {
+  float: right;
+  width: 350px;
 }
