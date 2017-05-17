@@ -196,14 +196,18 @@ header .right .login-con span {
   font-size: 12px;
 }
 .main {
+  position: relative;
   overflow: hidden;
   margin: 0 auto;
   width: 1280px;
 }
 .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 260px;
   height: 100%;
-  float: left;
   background-color: #2a2e3d;
   overflow: hidden;
 }
@@ -545,7 +549,129 @@ header .right .login-con span {
   padding: 0 40px;
   color: #aaa;
 }
+.container .main-right .project-info .project-left .info-con {
+  padding: 15px 20px 25px 20px;
+}
+.container .main-right .project-info .project-left .info-con ul {
+  position: relative;
+  top: 1px;
+  z-index: 999;
+}
+.container .main-right .project-info .project-left .info-con ul li {
+  float: left;
+  width: 87px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+  text-align: center;
+  color: #535353;
+  padding: 0 4px 0 0;
+  border-bottom: solid 1px #cbcbcc;
+  cursor: pointer;
+}
+.container .main-right .project-info .project-left .info-con ul li p {
+  position: relative;
+  top: -1px;
+  background-color: #ededf0;
+  border-bottom: solid 1px #cbcbcc;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.container .main-right .project-info .project-left .info-con ul li.cur p {
+  border: solid 1px #cbcbcc;
+  border-bottom: 0;
+  background-color: #fff;
+}
+.container .main-right .project-info .project-left .info-con .table-con {
+  width: 100%;
+  padding: 25px 50px 35px 35px;
+  border: solid 1px #cbcbcc;
+  -webkit-border-radius: 0 5px 5px 5px;
+  -moz-border-radius: 0 5px 5px 5px;
+  border-radius: 0 5px 5px 5px;
+}
+.container .main-right .project-info .project-left .info-con .table-con table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.container .main-right .project-info .project-left .info-con .table-con table td {
+  font-size: 12px;
+  color: #535353;
+  border: solid 1px #d7d7d7;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+.container .main-right .project-info .project-left .info-con .table-con table td.cur {
+  background-color: #f4f5f6;
+}
 .container .main-right .project-info .project-right {
   float: right;
   width: 350px;
+}
+.container .main-right .project-info .project-right .info-con {
+  position: relative;
+  padding: 15px 0 35px 40px;
+  font-size: 12px;
+}
+.container .main-right .project-info .project-right .info-con p {
+  padding: 0 0 0 16px;
+}
+.container .main-right .project-info .project-right .info-con p.show-title {
+  color: #c3c2c2;
+}
+.container .main-right .project-info .project-right .info-con p.text {
+  color: #535353;
+}
+.container .main-right .project-info .project-right .info-con .info-con-top {
+  height: 256px;
+  margin: 0 0 35px 0;
+}
+.container .main-right .project-info .project-right .info-con .info-con-top .price-con {
+  overflow: hidden;
+  border-bottom: solid 1px #dddedd;
+  padding: 5px 0 0 0;
+}
+.container .main-right .project-info .project-right .info-con .info-con-top .price-con .price {
+  float: left;
+  width: 100px;
+  height: 45px;
+  padding: 5px 0 0 0;
+  border-top: solid 1px #dddedd;
+  border-right: solid 1px #dddedd;
+}
+.container .main-right .project-info .project-right .info-con .info-con-top .price-con .person {
+  float: left;
+  width: 185px;
+  height: 45px;
+  padding: 5px 0 0 0;
+  border-top: solid 1px #dddedd;
+}
+.container .main-right .project-info .project-right .info-con .info-con-bottom {
+  position: absolute;
+  bottom: 35px;
+  left: 40px;
+  width: 280px;
+  height: 40px;
+  line-height: 40px;
+  border-top: solid 1px #dddedd;
+}
+.container .main-right .project-info .project-right .info-con .info-con-bottom input,
+.container .main-right .project-info .project-right .info-con .info-con-bottom span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #c3c2c2;
+}
+.container .main-right .project-info .project-right .info-con .info-con-bottom a {
+  float: right;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin: 10px 0 0 0;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  background-color: #388ac1;
+  border-radius: 2px;
 }
