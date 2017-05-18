@@ -696,17 +696,37 @@ header{
         }
       }
       .table-con{
-        padding: 0 20px;
+        padding: 0 20px 20px 20px;
         table{
-          border-collapse: collapse;
           width: 100%;
           text-align: center;
           font-size: 12px;
           color: #323333;
+          &.border-only-1{
+            border-collapse:collapse;
+            thead{
+              tr{
+                td{
+                  border-bottom: solid 1px #e1e1e1;
+                }
+              }
+            }
+          }
           td{
             width: 14.28%;
+            padding: 5px 0;
             &.weekend{
-
+              .solar{
+                color: #c9161d;
+              }
+            }
+            &.cur{
+              border: solid 1px #f8d564;
+            }
+            .lunar{
+              &.holiday{
+                color: #c9161d;
+              }
             }
           }
         }
@@ -718,6 +738,84 @@ header{
       border: solid 1px #d8d9db;
       border-radius: 5px;
       background-color: #fff;
+      .table-con{
+        padding: 20px 40px 25px 40px;
+        table{
+          width: 100%;
+          text-align: center;
+          border-collapse: collapse;
+          font-size: 12px;
+          tr{
+            td{
+              border:solid 1px #e1e1e2;
+              height: 23px;
+              line-height: 23px;
+              .num{
+                float: left;
+                width: 80px;
+                height: 23px;
+                line-height: 23px;
+                text-align: right;
+              }
+              .progress-con{
+                float: left;
+                position: relative;
+                margin: 10px 0 0 16px;
+                height: 4px;
+                width: 167px;
+                background-color: #dcdcdc;
+                .progress{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  background-color: #7ecaf0;
+                }
+              }
+            }
+            &:nth-child(1){
+              td{
+                .progress-con{
+                  .progress{
+                    background-color: #ec6d51;
+                  }
+                }
+              }
+            }
+            &:nth-child(2){
+              td{
+                .progress-con{
+                  .progress{
+                    background-color: #ef8050;
+                  }
+                }
+              }
+            }
+            &:nth-child(3){
+              td{
+                .progress-con{
+                  .progress{
+                    background-color: #f19f4f;
+                  }
+                }
+              }
+            }
+            &:last-child{
+              td{
+                border-bottom: 0;
+              }
+            }
+          }
+          tbody{
+            tr{
+              cursor: pointer;
+              &:hover{
+                background-color: #f3f4f6;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
