@@ -204,7 +204,7 @@ nav a.cur {
 }
 .third .list .item .text-con,
 .fourth .list .item .text-con {
-  padding-left: 30%;
+  padding-left: 4.2rem;
   overflow: hidden;
 }
 .third .list .item .text-con p,
@@ -229,4 +229,103 @@ nav a.cur {
   display: block;
   margin: 0 0 0 .1rem;
   background-color: #f7f7f7;
+}
+.fifth {
+  margin: 1rem 0 3rem 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+.fifth .item {
+  padding: .5rem 1rem;
+  position: relative;
+  border-bottom: solid 1px #e7e7e7;
+}
+.fifth .item .img {
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
+  width: 5rem;
+  height: 4rem;
+  border: solid 1px #faa937;
+  background-image: url(../../images/task11/1.jpg);
+  background-size: cover;
+}
+.fifth .item .content {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-flow: column wrap;
+  padding-left: 5.5rem;
+  overflow: hidden;
+  height: 4rem;
+}
+.fifth .item .content h2 {
+  flex: 0 1 2.2rem;
+  align-self: flex-start;
+  font-size: .8rem;
+  color: #666;
+}
+.fifth .item .content p {
+  flex: 0 1 auto;
+  align-self: flex-start;
+  color: #999;
+  font-size: .6rem;
+  position: relative;
+}
+.fifth .item .content p span {
+  display: inline-block;
+  margin: .9rem .4rem 0 0;
+}
+.fifth .img-more {
+  padding: 0 1rem .5rem 1rem;
+}
+.fifth .img-more h2 {
+  font-size: .8rem;
+  color: #666;
+  padding: .5rem 0;
+}
+.fifth .img-more .img-con {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-between;
+  align-items: center;
+}
+.fifth .img-more .img-con .img {
+  flex: 1 1 auto;
+  margin: 0 .1rem 0 0;
+  border: solid 1px #faa937;
+  background-image: url(../../images/task11/1.jpg);
+  background-size: cover;
+}
+.fifth .img-more .img-con .img:after {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+.fifth .img-more .img-con .img:last-child {
+  margin: 0;
+}
+.fifth .img-more p {
+  padding: .5rem 0 0 0;
+  color: #999;
+  font-size: .6rem;
+}
+.fifth .img-more p span {
+  display: inline-block;
+  margin: 0 .4rem 0 0;
 }
