@@ -28,4 +28,4 @@
 
 **斌斌学院**
 
-1.任务一：零基础JavaScript编码（一） BinBin College/task11
+1.任务一：零基础JavaScript编码（一） BinBin College/task1
