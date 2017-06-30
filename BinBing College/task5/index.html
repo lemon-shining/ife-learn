@@ -15,6 +15,11 @@
             margin: 5px 5px 0 0;
             width: 10px;
             background-color: #f00;
+
+            /*transition: .2s;
+            -moz-transition: .2s;
+            -webkit-transition: .2s;
+            -o-transition: .2s; */
         }
     </style>
 </head>
@@ -138,32 +143,67 @@
                 removeEle(item);
             }
         });
+
+        var timer = "";//定时器
+        var state = [];//state数组,存放每一次比较的结果(结果是一个数组,push的是一个数组)
+        var count1 = 0;//冒泡计数器,存放比较的总次数
+        var count2 = 0;//渲染计数器
+        var isSort = false;//正在排序的标志和渲染
+        //冒泡排序函数
+        function my_sort(arr){
+            for(var i = 0; i < arr.length; i++){
+                for(var j = i+1; j < arr.length; j++){
+                    if(arr[i] > arr[j]){
+                        var temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                        count1++;
+                        state.push(arr.slice(0));//比较后的结果数组push进state,相当于创建动画队列
+                    }
+                }
+            }
+        }
+        //页面渲染函数
+        function render(){
+            var list = document.getElementById("show-list");
+            var list_arr = list.getElementsByClassName("item");
+            var s = state.shift() || [];//读取并删除第一个元素
+            //循环遍历item元素,给每一个item的高度分别设置为第i次比较后每一项的值
+            for(var i = 0; i < list_arr.length; i++){
+                list_arr[i].style.height = s[i];
+                list_arr[i].setAttribute("data-height",s[i]);
+            }
+            //渲染计数器,每次渲染就加一
+            count2++;
+            if(count2 == count1){
+                clearInterval(timer);
+                isSort = false;
+            }
+        }
         addEvent(document.getElementById("my-sort"),"click",function(){
+            //判断是否正在排序，如果是就不往下执行代码
+            if(isSort){
+                return 0;
+            }else{
+                isSort = true;
+            }
+            //初始化
+            count1 = 0;
+            count2 = 0;
+            state = [];
+
             var list = document.getElementById("show-list");
             var item_arr = list.getElementsByClassName("item");
-            //NodeList转成数组
+            //NodeList转成数组,改数组只存height
             var div_arr = [];
             for(var i = 0; i < item_arr.length; i++){
                 var div = item_arr[i];
-                div_arr.push(div);
+                div_arr.push(div.style.height);
             }
-            if(div_arr.length > 2){
-                //冒泡排序
-                for(i = 0; i < div_arr.length; i++){
-                    for(var j = i+1; j< div_arr.length; j++){
-                        if(div_arr[i].getAttribute("data-height") > div_arr[j].getAttribute("data-height")){
-                            var temp = div_arr[j];
-                            div_arr[j] = div_arr[i];
-                            div_arr[i] = temp;
-                        }
-                    }
-                }
-                var arr = [];
-                for(i = 0;i < div_arr.length; i++){
-                    arr.push(div_arr[i].outerHTML);
-                }
-                //重新渲染HTML
-                list.innerHTML = arr.join("");
+            if(div_arr.length >= 2){
+                my_sort(div_arr);
+                //定义一个全局变量timer定时器
+                timer = setInterval(render,500);
             }
         });
     </script>
