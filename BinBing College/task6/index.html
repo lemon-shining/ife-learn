@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 04</title>
+    <style type="text/css">
+        #show-list{
+            overflow: hidden;
+        }
+        #show-list .item{
+            cursor: pointer;
+            float: left;
+            margin: 5px 5px 5px 0;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color:#fff;
+            background-color: #f00;
+        }
+        #show-list .item.cur{
+            background-color: #0c9;
+        }
+    </style>
+</head>
+<body>
+
+    <textarea placeholder="请输入内容" id="my-input"></textarea>
+    <button id="left-add">左侧入</button>
+    <button id="right-add">右侧入</button>
+    <button id="left-del">左侧出</button>
+    <button id="right-del">右侧出</button>
+
+    <input type="text" placeholder="查询内容" id="find-input"/>
+    <button id="find-btn">查询</button>
+
+    <div id="show-list">
+
+    </div>
+
+    <script type="text/javascript">
+        //绑定事件的函数的兼容写法
+        var addEvent = (function(){
+            if(window.addEventListener){
+                return function(ele,event,fn){
+                    ele.addEventListener(event,fn,false);
+                };
+            }else if(window.attachEvent){
+                return function(ele,event,fn){
+                    ele.attachEvent("on"+event,fn);
+                }
+            }else{
+                return function(ele,event,fn){
+                    ele["on"+event] = fn;
+                }
+            }
+        })();
+        //删除节点的兼容方法,因为浏览器都有removeChild方法，所以不用remove等又兼容问题的方法
+        function removeEle(ele){
+            //先找到父节点，然后删除其子节点
+            var parentEle = ele.parentNode;
+            if(parentEle){
+                parentEle.removeChild(ele);
+            }
+        }
+        //获取输入的文本并拆分
+        function getTextToArr(){
+            var text = document.getElementById("my-input").value;
+            var text_arr = text.split(/[\n\r,，、\t 　]+/);//用正则分割字符串
+            //去掉空串
+            var my_arr = [];
+            for(var i = 0;i < text_arr.length; i++){
+                if(text_arr[i] != ""){
+                    my_arr.push(text_arr[i]);
+                }
+            }
+            return my_arr;
+        }
+        //公用的添加函数
+        function add(_type){
+            var text_arr = getTextToArr();
+            var fragment = document.createDocumentFragment();//创建文档碎片节点，用于减少页面渲染次数
+            for(var i = 0 ;i < text_arr.length; i++){
+                var item = document.createElement("div");
+                item.setAttribute("class","item");
+                var item_text = document.createTextNode(text_arr[i]);
+                item.appendChild(item_text);
+                fragment.appendChild(item);
+            }
+
+            if(_type == "left-add"){
+                var item_arr = document.getElementById("show-list").getElementsByClassName("item");
+                if(item_arr.length > 0){
+                    document.getElementById("show-list").insertBefore(fragment,item_arr[0]);
+                }else{
+                    document.getElementById("show-list").appendChild(fragment);
+                }
+            }else if(_type == "right-add"){
+                document.getElementById("show-list").appendChild(fragment);
+            }
+        }
+        //公用的删除函数
+        function del(_type){
+            var list = document.getElementById("show-list");
+            var item_arr = list.getElementsByClassName("item");
+            if(item_arr.length > 1){
+                if(_type == "left-del"){
+                    alert("您要移除的元素的值为"+item_arr[0].innerText);
+                    removeEle(item_arr[0]);
+                }else if(_type == "right-del"){
+                    alert("您要移除的元素的值为"+item_arr[item_arr.length-1].innerText);
+                    removeEle(item_arr[item_arr.length-1]);
+                }
+            }else if(item_arr.length == 1){
+                alert("您要移除的元素的值为"+item_arr[0].innerText);
+                removeEle(item_arr[0]);
+            }
+        }
+        //查询函数
+        function find(){
+            var text = document.getElementById("find-input").value;
+            var list = document.getElementById("show-list");
+            var item_arr_node = list.getElementsByClassName("item");
+            //先去掉所有的标记
+            var cur_list = list.getElementsByClassName("cur");
+            //要从后忘前去掉类才行，因为是实时监测的
+            for(var i = cur_list.length - 1 ;i >= 0; i--){
+                cur_list[i].classList.remove("cur");
+            }
+            //如果为空，就不匹配
+            if(text == ""){
+                return 0;
+            }
+            //添加匹配的标记
+            for(i = 0;i < item_arr_node.length; i++){
+                if(item_arr_node[i].innerText.indexOf(text) >=0 ){
+                    item_arr_node[i].classList.add("cur");
+                }
+            }
+        }
+        addEvent(document.getElementById("left-add"),"click",function(){
+            add("left-add");
+        });
+        addEvent(document.getElementById("right-add"),"click",function(){
+            add("right-add");
+        });
+        addEvent(document.getElementById("left-del"),"click",function(){
+            del("left-del");
+        });
+        addEvent(document.getElementById("right-del"),"click",function(){
+            del("right-del");
+        });
+        addEvent(document.getElementById("show-list"),"click",function(e){
+            var item = e.srcElement || e.target;//兼容事件源的写法,IE为e.srcElement,firefox为e.target,Chrome浏览器同时有这两个属性
+            if(item.getAttribute("class") == "item"){
+                alert("您要移除的元素的值为"+item.innerText);
+                removeEle(item);
+            }
+        });
+        addEvent(document.getElementById("find-btn"),"click",function(){
+            find();
+        });
+    </script>
+</body>
+</html>
