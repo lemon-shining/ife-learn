@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 07</title>
+    <style type="text/css">
+        .content{
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            border: solid 1px #666;
+            background-color: #fff;
+        }
+        .container{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+        .item{
+            flex: 1 1 auto;
+            margin: 5px;
+            padding: 5px;
+            background-color: #fff;
+            border: solid 1px #666;
+        }
+        .item.final{
+            flex: 1 1 auto;
+            margin: 5px;
+            padding: 0;
+            width: 40px;
+            height: 30px;
+            border: solid 1px #666;
+            background-color: #fff;
+        }
+        .content.cur,
+        .item.cur,
+        .final.cur{
+            background-color: #0c9;
+        }
+        .btn{
+            margin: 10px 0 0 4px;
+        }
+    </style>
+</head>
+<body>
+
+ <!--   <div class="content" style="width: 600px;">
+        <div class="item">
+            <div class="container">
+                <div class="item">
+                    <div class="container">
+                        <div class="final"></div>
+                        <div class="final"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+                        <div class="final"></div>
+                        <div class="final"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item container">
+            <div class="item">
+                <div class="container">
+                    <div class="final"></div>
+                    <div class="final"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="final"></div>
+                    <div class="final"></div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div id="root" class="content" style="width: 600px;">
+        <div class="item container">
+            <div class="item container">
+                <div class="item final"></div>
+                <div class="item final"></div>
+            </div>
+            <div class="item container">
+                <div class="item final"></div>
+                <div class="item final"></div>
+            </div>
+        </div>
+        <div class="item container">
+            <div class="item container">
+                <div class="item final"></div>
+                <div class="item final"></div>
+            </div>
+            <div class="item container">
+                <div class="item final"></div>
+                <div class="item final"></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn" id="preOrderBtn">先序遍历</button>
+    <button class="btn" id="inOrderBtn">中序遍历</button>
+    <button class="btn" id="postOrderBtn">后序遍历</button>
+
+    <script type="text/javascript">
+        //绑定事件的函数的兼容写法
+        var addEvent = (function(){
+            if(window.addEventListener){
+                return function(ele,event,fn){
+                    ele.addEventListener(event,fn,false);
+                };
+            }else if(window.attachEvent){
+                return function(ele,event,fn){
+                    ele.attachEvent("on"+event,fn);
+                }
+            }else{
+                return function(ele,event,fn){
+                    ele["on"+event] = fn;
+                }
+            }
+        })();
+
+        var arr = [];//要渲染的队列
+        var timer = "";//定时器
+        var isLoop = false;//是否正在遍历（渲染）
+        //递归，先序遍历(方法一),将nodeList转成数组
+        function getTargetArrByNode(rootEle){
+            var curNode = rootEle.childNodes;
+            for(var i =0;i < curNode.length; i++){
+                //元素节点:1  属性节点:2  文本节点:3  注释节点:8
+                if(curNode[i].nodeType == 1){
+                    arr.push(curNode[i]);
+                }
+                getTargetArrByNode(curNode[i]);
+            }
+        }
+        //先序遍历(方法二),因为是二叉树，所以知道left和right是第一和第二个子元素
+        function preOrder(node){
+            if(node){
+                arr.push(node);
+                preOrder(node.children[0]);
+                preOrder(node.children[1]);
+            }
+        }
+        //中序遍历
+        function inOrder(node){
+            if(node){
+                inOrder(node.children[0]);
+                arr.push(node);
+                inOrder(node.children[1]);
+            }
+        }
+        //后序遍历
+        function postOrder(node){
+            if(node){
+                postOrder(node.children[0]);
+                postOrder(node.children[1]);
+                arr.push(node);
+            }
+        }
+        //读取遍历的顺序，渲染页面效果
+        function setBgByArr(){
+            //先去掉所有的cur
+            var list = document.getElementsByClassName("cur");
+            for(var i = 0; i < list.length; i++){
+                list[i].classList.remove("cur");
+            }
+            //读取数组的第一个元素进行渲染，渲染完成后将该元素移除数组
+            if(arr.length > 0){
+                var cur_el = arr.shift();
+                cur_el.classList.add("cur");
+            }else{
+                clearInterval(timer);
+                isLoop = false;
+            }
+        }
+        addEvent(document.getElementById("preOrderBtn"),"click",function(){
+            if(isLoop){
+                return 0;
+            }else{
+                isLoop = true;
+            }
+            //初始化数据
+            arr = [];
+            //方法一
+            /*arr.push(document.getElementById("root"));//加入根节点
+            getTargetArrByNode(document.getElementById("root"));*/
+            //方法二
+            preOrder(document.getElementById("root"));
+            timer = setInterval(setBgByArr,500);
+        });
+        addEvent(document.getElementById("inOrderBtn"),"click",function(){
+            if(isLoop){
+                return 0;
+            }else{
+                isLoop = true;
+            }
+            //初始化数据
+            arr = [];
+            inOrder(document.getElementById("root"));
+            timer = setInterval(setBgByArr,500);
+        });
+        addEvent(document.getElementById("postOrderBtn"),"click",function(){
+            if(isLoop){
+                return 0;
+            }else{
+                isLoop = true;
+            }
+            //初始化数据
+            arr = [];
+            postOrder(document.getElementById("root"));
+            timer = setInterval(setBgByArr,500);
+        });
+
+    </script>
+</body>
+</html>
