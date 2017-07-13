@@ -42,3 +42,8 @@
 6.任务六：基础JavaScript练习（三） BinBin College/task6
 
 7.任务七：JavaScript和树（一） BinBin College/task7
+
+
+**糯米学院**
+
+2.任务二：动态数据绑定（一） NuoMi/task2
