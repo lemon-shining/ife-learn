@@ -35,6 +35,10 @@
 
 3.任务三：零基础JavaScript编码（三） BinBin College/task3
 
-4.任务三：基础JavaScript练习（一） BinBin College/task4
+4.任务四：基础JavaScript练习（一） BinBin College/task4
 
-5.任务三：基础JavaScript练习（二） BinBin College/task5
+5.任务五：基础JavaScript练习（二） BinBin College/task5
+
+6.任务六：基础JavaScript练习（三） BinBin College/task6
+
+7.任务七：JavaScript和树（一） BinBin College/task7
