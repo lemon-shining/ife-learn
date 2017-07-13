@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <mate charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        //构造函数
+            function Observer(data){
+                this.data = data;
+                this.walk(data);
+            }
+            //原型链给变量
+            let obs_p = Observer.prototype;
+            //walk成员方法,，递归绑定getter和setter
+            obs_p.walk = function(data){
+                let value;
+                for (let key in data){
+                    //去掉原型链上面的其它属性，获取传入参数的属性
+                    if(data.hasOwnProperty(key)){
+                        value = data[key];
+
+                        //接着判断是否有下一层
+                        if(typeof value === "object"){
+                            new Observer(value);
+                        }
+
+                        //给当前属性添加getter和setter
+                        this.convert(key,value);        
+                    }        
+                }
+            }
+            //添加getter和setter的成员方法
+            obs_p.convert = function(key,value){
+                //ES5修改属性的操作方法
+                Object.defineProperty(this.data,key,{
+                    enumerable:true,
+                    configurable:true,
+                    get:function(){
+                        console.log("访问了"+key);
+                        return value;        
+                    },
+                    set:function(new_value){
+                        console.log("设置了"+key);
+                        console.log("新的 "+key+" = "+new_value);
+                        if(new_value === value){
+                            return ;
+                        }
+                        value = new_value;
+                    }
+                })
+            }
+
+            let data = {
+                user: {
+                    name: "xxxx",
+                    age: "23"
+                },
+                address: {
+                    city: "bbbb"
+                }
+            };
+
+            let app = new Observer(data);
+    </script>
+</body>    
+</html>
